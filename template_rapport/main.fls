@@ -181,6 +181,7 @@ INPUT C:\Users\Thibault\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\eccc
 INPUT C:\Users\Thibault\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecss1095.tfm
 INPUT C:\Users\Thibault\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsl1095.tfm
 INPUT C:\Users\Thibault\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbi1095.tfm
+INPUT C:\Users\Thibault\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\Thibault\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
 INPUT C:\Users\Thibault\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1728.tfm
 INPUT .\main.toc
@@ -192,6 +193,9 @@ INPUT .\sections\Introduction.tex
 INPUT .\sections\Introduction.tex
 INPUT sections\Introduction.tex
 INPUT C:\Users\Thibault\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT .\sections\chap1.tex
+INPUT .\sections\chap1.tex
+INPUT sections\chap1.tex
 INPUT .\sections\abreviations.tex
 INPUT .\sections\abreviations.tex
 INPUT sections\abreviations.tex
@@ -210,6 +214,8 @@ INPUT C:\Users\Thibault\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\
 INPUT C:\Users\Thibault\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
 INPUT C:\Users\Thibault\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
 INPUT C:\Users\Thibault\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+INPUT C:\Users\Thibault\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
+INPUT C:\Users\Thibault\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk
 INPUT C:\Users\Thibault\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1095.pk
 INPUT C:\Users\Thibault\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbi1095.pk
 INPUT C:\Users\Thibault\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1095.pk
