@@ -20,9 +20,11 @@ Ce projet contient un template LaTeX que j'ai créé pour les besoins de mon rap
 
 Pour utiliser ce template, vous aurez besoin de LaTeX installé sur votre machine. Vous pouvez télécharger une distribution LaTeX comme [TeX Live](https://www.tug.org/texlive/) ou [MiKTeX](https://miktex.org/).
 
+Il peut également être nécessaire d'installer Perl. Vous pouvez télécharger Perl depuis [Raspberry Perl](https://www.raspberryperl.org/).
+
 ## 🚀 Utilisation
 
-1. Clonez ce dépôt : `git clone https://github.com/votre-utilisateur/votre-repo.git`
+1. Clonez ce dépôt : `git clone https://github.com/shadowthib/LaTex-learning.git`.
 2. Compilez le fichier `main.tex` avec votre éditeur LaTeX préféré.
 3. Si vous utilisez MiKTeX, vous pouvez compiler le document en exécutant `latex main.tex` dans votre terminal.
 
