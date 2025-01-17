@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{geometry}
+\usepackage{comment}
 
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
@@ -45,33 +46,65 @@
 \maketitle
 \newpage
 \begin{abstract}
-    Voici un exemple de texte avec différents paramètres appliqués :
-    
-    \textbf{Texte en gras} : Utilisé pour mettre en évidence des mots ou des phrases importantes.
-    
-    \textit{Texte en italique} : Utilisé pour souligner des termes techniques ou des titres d'œuvres.
-    
-    \underline{Texte souligné} : Utilisé pour attirer l'attention sur des éléments spécifiques.
-    
-    \texttt{Texte en typewriter} : Utilisé pour représenter du code ou des commandes.
-    
-    \textsc{Texte en petites majuscules} : Utilisé pour des acronymes ou des noms propres.
-    
-    \textsf{Texte en sans-serif} : Utilisé pour un style de police sans empattement.
-    
-    \textsl{Texte en italique incliné} : Une autre variante de l'italique.
-    
-    \textbf{\textit{Texte en gras et italique}} : Combinaison de gras et italique pour une emphase supplémentaire.
-    
-    \textbf{\underline{Texte en gras et souligné}} : Combinaison de gras et souligné pour une emphase supplémentaire.
-    
-    \textit{\underline{Texte en italique et souligné}} : Combinaison d'italique et souligné pour une emphase supplémentaire.
-    
-    Texte en exposant : Utilisé pour les puissances ou les indices, par exemple, $x^6$ ou $H_2O$ RTBF$^{87}$
-    
-    Texte avec lien vers abréviations : Utilisé pour créer des liens hypertextes vers les abréviations, par exemple, \hyperlink{RTBF}{RTBF}$^{\hyperlink{RTBF}{87}}$
+    \begin{verbatim}
+    \textbf{Texte en gras} : Pour mettre en évidence.
+    \end{verbatim}
 
-    Exemple de référence\textsuperscript{\cite{ref1}} : Utilisé pour ajouter des références bibliographiques en exposant.
+    \begin{verbatim}
+    \textit{Texte en italique} : Pour souligner des termes.
+    \end{verbatim}
+
+    \begin{verbatim}
+    \underline{Texte souligné} : Pour attirer l'attention.
+    \end{verbatim}
+
+    \begin{verbatim}
+    \texttt{Texte en typewriter} : Pour représenter du code.
+    \end{verbatim}
+
+    \begin{verbatim}
+    \textsc{Texte en petites majuscules} : Pour acronymes ou noms propres.
+    \end{verbatim}
+
+    \begin{verbatim}
+    \textsf{Texte en sans-serif} : Pour un style sans empattement.
+    \end{verbatim}
+
+    \begin{verbatim}
+    \textsl{Texte en italique incliné} : Variante de l'italique.
+    \end{verbatim}
+
+    \begin{verbatim}
+    \textbf{\textit{Texte en gras et italique}} : Emphase supplémentaire.
+    \end{verbatim}
+
+    \begin{verbatim}
+    \textbf{\underline{Texte en gras et souligné}} : Emphase supplémentaire.
+    \end{verbatim}
+
+    \begin{verbatim}
+    \textit{\underline{Texte en italique et souligné}} : Emphase supplémentaire.
+    \end{verbatim}
+
+    \begin{verbatim}
+    Texte en exposant : Pour puissances ou indices, ex: $x^6$ ou $H_2O$ RTBF$^{87}$.
+    \end{verbatim}
+
+    \begin{verbatim}
+    Texte avec lien : \hyperlink{RTBF}{RTBF}$^{\hyperlink{RTBF}{87}}$.
+                      Exemple dans les références
+    \end{verbatim}
+
+    \begin{verbatim}
+    Référence\textsuperscript{\cite{ref1}} : Ajouter des références.
+                                             Exemple dans la bibliographie.
+    \end{verbatim}
+
+    \begin{verbatim}
+    \begin{comment} au debut du bloc et \end{comment} a la fin pour commenter.
+    \end{verbatim}
+
+    
     
 \end{abstract}
 
