@@ -7,6 +7,7 @@
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{comment}
+\usepackage{listings}
 
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
@@ -46,65 +47,79 @@
 \maketitle
 \newpage
 \begin{abstract}
+    Voici les différents paramètres pour mettre en forme le texte : 
+    
+    Exemple: \textbf{Texte en gras}.
     \begin{verbatim}
-    \textbf{Texte en gras} : Pour mettre en évidence.
+    \textbf{texte} : Pour mettre le texte en gras.
+    \end{verbatim}
+    
+
+    Exemple: \textit{Texte en italique}.
+    \begin{verbatim}
+    \textit{texte} : Pour mettre le texte en italique.
+    \end{verbatim}
+    
+
+    Exemple: \underline{Texte souligné}.
+    \begin{verbatim}
+    \underline{texte} : Pour souligner le texte.
+    \end{verbatim}
+    
+
+    Exemple: \texttt{Texte en code}.
+    \begin{verbatim}
+    \texttt{texte} : Pour représenter du code.
+    \end{verbatim}
+    
+
+    Exemple: \textsc{Texte en petites majuscules}.
+    \begin{verbatim}
+    \textsc{texte} : Pour mettre le texte en petites majuscules.
+    \end{verbatim}
+    
+
+    Exemple: \textsf{Texte sans empattement}.
+    \begin{verbatim}
+    \textsf{texte} : Pour un style sans empattement.
+    \end{verbatim}
+    
+
+    Exemple: \textsl{Texte en italique}.
+    \begin{verbatim}
+    \textsl{texte} : Pour mettre le texte en italique (autre variante).
+    \end{verbatim}
+    
+
+    Exemple: \textbf{\textit{Texte en gras et italique}}.
+    \begin{verbatim}
+    \textbf{\textit{texte}} : Pour mettre le texte en gras et italique.
     \end{verbatim}
 
+    Exemple: \textbf{\underline{Texte en gras et souligné}}.
     \begin{verbatim}
-    \textit{Texte en italique} : Pour souligner des termes.
+    \textbf{\underline{texte}} : Pour mettre le texte en gras et souligné.
     \end{verbatim}
 
+    Exemple: \textit{\underline{Texte en italique et souligné}}.
     \begin{verbatim}
-    \underline{Texte souligné} : Pour attirer l'attention.
+    \textit{\underline{texte}} : Pour mettre le texte en italique et souligné.
     \end{verbatim}
 
-    \begin{verbatim}
-    \texttt{Texte en typewriter} : Pour représenter du code.
-    \end{verbatim}
-
-    \begin{verbatim}
-    \textsc{Texte en petites majuscules} : Pour acronymes ou noms propres.
-    \end{verbatim}
-
-    \begin{verbatim}
-    \textsf{Texte en sans-serif} : Pour un style sans empattement.
-    \end{verbatim}
-
-    \begin{verbatim}
-    \textsl{Texte en italique incliné} : Variante de l'italique.
-    \end{verbatim}
-
-    \begin{verbatim}
-    \textbf{\textit{Texte en gras et italique}} : Emphase supplémentaire.
-    \end{verbatim}
-
-    \begin{verbatim}
-    \textbf{\underline{Texte en gras et souligné}} : Emphase supplémentaire.
-    \end{verbatim}
-
-    \begin{verbatim}
-    \textit{\underline{Texte en italique et souligné}} : Emphase supplémentaire.
-    \end{verbatim}
-
+    Exemple: $x^6$ ou $H_2O$ RTBF$^{87}$.
     \begin{verbatim}
     Texte en exposant : Pour puissances ou indices, ex: $x^6$ ou $H_2O$ RTBF$^{87}$.
     \end{verbatim}
 
+    Exemple: \hyperlink{RTBF}{RTBF}$^{\hyperlink{RTBF}{87}}$.
     \begin{verbatim}
     Texte avec lien : \hyperlink{RTBF}{RTBF}$^{\hyperlink{RTBF}{87}}$.
-                      Exemple dans les références
     \end{verbatim}
-
+    
+    Exemple: Référence\textsuperscript{\cite{ref1}}.
     \begin{verbatim}
     Référence\textsuperscript{\cite{ref1}} : Ajouter des références.
-                                             Exemple dans la bibliographie.
     \end{verbatim}
-
-    \begin{verbatim}
-    \begin{comment} au debut du bloc et \end{comment} a la fin pour commenter.
-    \end{verbatim}
-
-    
     
 \end{abstract}
 
