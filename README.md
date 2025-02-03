@@ -20,7 +20,7 @@ Ce projet contient un template LaTeX que j'ai créé pour les besoins de mon rap
 
 Pour utiliser ce template, vous aurez besoin de LaTeX installé sur votre machine. Vous pouvez télécharger une distribution LaTeX comme [TeX Live](https://www.tug.org/texlive/) ou [MiKTeX](https://miktex.org/).
 
-Il peut également être nécessaire d'installer Perl. Vous pouvez télécharger Perl depuis [Raspberry Perl](https://www.raspberryperl.org/).
+Il peut également être nécessaire d'installer Perl. Vous pouvez télécharger Perl depuis [Strawberry Perl](https://strawberryperl.com/).
 
 ## 🚀 Utilisation
 
