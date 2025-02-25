@@ -8,6 +8,7 @@
 \usepackage{geometry}
 \usepackage{comment}
 \usepackage{listings}
+\usepackage[none]{hyphenat}
 
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
@@ -61,8 +62,9 @@
 \maketitle
 \vspace{-2.5cm}
 \begin{abstract}
+    \raggedright % pour eviter de couper les mots en fin de ligne
     Voici les différents paramètres pour mettre en forme le texte : 
-    
+
     Exemple: \textbf{Texte en gras}.
     \begin{verbatim}
     \textbf{texte} : Pour mettre le texte en gras.
@@ -133,6 +135,10 @@
     Exemple: Référence\textsuperscript{\cite{ref1}}.
     \begin{verbatim}
     Référence\textsuperscript{\cite{ref1}} : Ajouter des références.
+    \end{verbatim}
+
+    \begin{verbatim}
+        \raggedright : Pour eviter de couper les mots en fin de ligne
     \end{verbatim}
     
 \end{abstract}
