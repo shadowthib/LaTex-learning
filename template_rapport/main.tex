@@ -1,6 +1,7 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage[french]{babel}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{hyperref}
@@ -8,7 +9,8 @@
 \usepackage{comment}
 \usepackage{listings}
 \usepackage[none]{hyphenat}
-\usepackage{fancyhdr} % Importation du package fancyhdr
+\usepackage{fancyhdr}
+\usepackage{datetime}
 %\usepackage{draftwatermark}
 
 \geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
@@ -19,7 +21,7 @@
 %\SetWatermarkColor{red}
 %\SetWatermarkAngle{45}
 
-\fancypagestyle{firstpage}{
+\fancypagestyle{couverture}{
     \fancyhf{}
     \fancyhead[L]{\includegraphics[width=8cm]{img/logo_hehbe_tech.png}} 
     \fancyhead[R]{\vspace{1.8cm}\textbf{Année académique 20xx-20xx}} 
@@ -30,75 +32,111 @@
     \renewcommand{\footrulewidth}{0pt} 
 }
 
-
-
-
-
-\title{
-
-    \vspace{2cm}
-        
-        {\large \textbf{HAUTE ECOLE DE LA COMMUNAUTE FRANCAISE EN HAINAUT}}\\
-        {\large Département Sciences et Technologies}\\
-        {\large 8A Avenue Victor Maistriau -- 7000 Mons}
-    \vspace{2cm}
-    \begin{center}
-        \fboxrule=0.3mm
-        \fbox{
-            \parbox{\textwidth}{
-                \vspace{1cm}
-                \centering
-                \textbf{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae}
-                \vspace{1cm}
-            }
-        }
-    \end{center}
-    \vspace{1cm}
-    \begin{center}
-        \normalsize{\textit{Travail de fin d'études réalisé en vue de l'obtention du titre de bachelier en Informatique et systèmes, orientation réseaux et télécommunications}}
-    \end{center}
-    \vspace{5cm}
-        
-    \date{}
+\fancypagestyle{page_de_garde}{
+    \fancyhf{}
+    \fancyhead[L]{\includegraphics[width=8cm]{img/logo_hehbe_tech.png}} 
+    \fancyhead[R]{\vspace{1.8cm}\textbf{Année académique 20xx-20xx}} 
+    \fancyfoot[L]{Promoteur : Nom Prénom} 
+    \fancyfoot[C]{\monthname~\the\year}
+    \fancyfoot[R]{Étudiant : Nom Prénom}
+    \renewcommand{\headrulewidth}{0pt} 
+    \renewcommand{\footrulewidth}{0pt} 
 }
 
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\footrulewidth}{0.1pt}
+\renewcommand{\headrulewidth}{0.1pt}
+\fancyhead[L]{\includegraphics[width=0.15\textwidth]{img/logo_hehbe_tech.png}}
+\fancyhead[R]{\vspace{0.1cm}\textbf{Année académique 2024-2025}}
+\fancyfoot[L]{ \today}
+\fancyfoot[C]{Page \thepage}
+\fancyfoot[R]{Version N° 0.5}
+\headsep = 2cm
+\textheight = 24cm
 
+
+
+\newcommand{\premierepage}{
+     \thispagestyle{couverture}
+        \vspace*{2cm}
+        \begin{center}    
+            {\large \textbf{HAUTE ECOLE DE LA COMMUNAUTE FRANCAISE EN HAINAUT}}\\
+            {\large Département Sciences et Technologies}\\
+            {\large 8A Avenue Victor Maistriau -- 7000 Mons}
+        \end{center}
+        \vspace{3cm}
+        \begin{center}
+            \fboxrule=0.3mm
+            \fbox{
+                \parbox{\textwidth}{
+                    \vspace{1cm}
+                    \centering
+                    \textbf{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae}
+                    \vspace{1cm}
+                }
+            }
+        \end{center}
+        \vspace{1.5cm}
+        \begin{center}
+            \normalsize{\textit{Travail de fin d'études réalisé en vue de l'obtention du titre de bachelier en Informatique et systèmes, orientation réseaux et télécommunications}}
+        \end{center}
+        \vspace{5cm}
+
+        \date{}
+}
+
+\newcommand{\troisiemepage}{
+     \thispagestyle{page_de_garde}
+        \vspace*{2cm}
+        \begin{center}    
+            {\large \textbf{HAUTE ECOLE DE LA COMMUNAUTE FRANCAISE EN HAINAUT}}\\
+            {\large Département Sciences et Technologies}\\
+            {\large 8A Avenue Victor Maistriau -- 7000 Mons}
+        \end{center}
+        \vspace{3cm}
+        \begin{center}
+            \fboxrule=0.3mm
+            \fbox{
+                \parbox{\textwidth}{
+                    \vspace{1cm}
+                    \centering
+                    \textbf{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae}
+                    \vspace{1cm}
+                }
+            }
+        \end{center}
+        \vspace{1.5cm}
+        \begin{center}
+            \normalsize{\textit{Travail de fin d'études réalisé en vue de l'obtention du titre de bachelier en Informatique et systèmes, orientation réseaux et télécommunications}}
+        \end{center}
+        \vspace{5cm}
+
+        \date{}
+}
 
 \begin{document}
 \raggedright
 
-\maketitle
-\thispagestyle{firstpage}
+\premierepage
 
 \newpage
 \thispagestyle{empty} 
-\mbox{} 
+\mbox{}
+
 
 \newpage
-\begin{titlepage}
-    \thispagestyle{firstpage}
-    \vspace*{2cm}
-    \centering
-    \vspace{1cm}
-    {\Large \textbf{HAUTE ECOLE DE LA COMMUNAUTE FRANCAISE EN HAINAUT}}\\
-    {\large Département Sciences et Technologies}\\
-    {\large 8A Avenue Victor Maistriau -- 7000 Mons}
-    \vspace{2cm}
-    \fboxrule=0.3mm
-    \fbox{
-        \parbox{\textwidth}{
-            \vspace{1cm}
-            \centering
-            \textbf{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae}
-            \vspace{1cm}
-        }
-    }\par
-    \vspace{1cm}
-    \textit{Travail de fin d'études réalisé en vue de l'obtention du titre de bachelier en Informatique et systèmes, orientation réseaux et télécommunications}\par
-    \vfill
-\end{titlepage}
+\pagenumbering{arabic} 
+\troisiemepage
 
-\maketitle
+\newpage
+\input{sections/remerciements.tex}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
 \newpage
 
     Voici les différents paramètres pour mettre en forme le texte : 
@@ -173,8 +211,7 @@
     \end{verbatim}
     
 
-\newpage
-\tableofcontents
+
 
 \newpage
 \input{sections/Introduction.tex} % ajoute l'introduction
