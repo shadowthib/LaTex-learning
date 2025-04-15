@@ -12,3 +12,7 @@
 *.pdf
 *.lof
 *.lot
+*.bbl
+*.blg
+*.run.xml
+*.bcf

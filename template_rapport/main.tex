@@ -7,10 +7,14 @@
 \usepackage{hyperref}
 \usepackage{geometry}
 \usepackage{comment}
+\usepackage{float}
 \usepackage{listings}
 \usepackage[none]{hyphenat}
 \usepackage{fancyhdr}
 \usepackage{datetime}
+\usepackage[backend=biber,style=apa]{biblatex}
+\usepackage{biblatex}
+\addbibresource{bibliographie.bib}
 %\usepackage{draftwatermark}
 
 \geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
@@ -40,20 +44,18 @@
     \fancyfoot[C]{\monthname~\the\year}
     \fancyfoot[R]{Étudiant : Nom Prénom}
     \renewcommand{\headrulewidth}{0pt} 
-    \renewcommand{\footrulewidth}{0pt} 
+    \renewcommand{\footrulewidth}{0pt}
 }
 
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\footrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0pt}
 \renewcommand{\headrulewidth}{0.1pt}
 \fancyhead[L]{\includegraphics[width=0.15\textwidth]{img/logo_hehbe_tech.png}}
 \fancyhead[R]{\vspace{0.1cm}\textbf{Année académique 2024-2025}}
-\fancyfoot[L]{ \today}
-\fancyfoot[C]{Page \thepage}
-\fancyfoot[R]{Version N° 0.5}
+\fancyfoot[R]{Page \thepage}
 \headsep = 2cm
-\textheight = 24cm
+\textheight = 24.7cm
 
 
 
@@ -221,6 +223,9 @@
 \newpage
 \input{sections/abreviations.tex} % ajoute la liste des abréviations
 \newpage
-\input{sections/bibliographie.tex} % ajoute les bibliographies
+
+
+\input{sections/bibliographie.tex}
+
 
 \end{document}
