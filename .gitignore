@@ -16,3 +16,6 @@
 *.blg
 *.run.xml
 *.bcf
+*.ptc
+*.bbl-SAVE-ERROR
+*.annextoc
