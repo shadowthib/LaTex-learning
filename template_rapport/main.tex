@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -15,9 +15,12 @@
 \usepackage{titletoc}
 \usepackage{titlesec}
 \usepackage{tocloft}
+\usepackage{times}
 \usepackage[backend=biber,style=apa]{biblatex}
 \addbibresource{bibliographie.bib}
 %\usepackage{draftwatermark}
+\titleformat{\chapter}[hang]
+    {\normalfont\huge\bfseries}{\thechapter}{1em}{}
 
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
@@ -49,6 +52,16 @@
     \renewcommand{\footrulewidth}{0pt}
 }
 
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{\includegraphics[width=0.15\textwidth]{img/logo_hehbe_tech.png}}
+\fancyhead[R]{\vspace{0.1cm}\textbf{Année académique 2024-2025}}
+    \fancyfoot[R]{Page \thepage}
+    \renewcommand{\headrulewidth}{0.1pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\footrulewidth}{0pt}
@@ -58,6 +71,7 @@
 \fancyfoot[R]{Page \thepage}
 \headsep = 1.5cm
 \textheight = 24cm
+
 
 
 
@@ -140,92 +154,15 @@
 \newpage
 \listoffigures
 \newpage
-\listoftables
-\newpage
-
-
-    Voici les différents paramètres pour mettre en forme le texte : 
-
-    Exemple: \textbf{Texte en gras}.
-    \begin{verbatim}
-    \textbf{texte} : Pour mettre le texte en gras.
-    \end{verbatim}
-    
-    Exemple: \textit{Texte en italique}.
-    \begin{verbatim}
-    \textit{texte} : Pour mettre le texte en italique.
-    \end{verbatim}
-    
-    Exemple: \underline{Texte souligné}.
-    \begin{verbatim}
-    \underline{texte} : Pour souligner le texte.
-    \end{verbatim}
-    
-    Exemple: \texttt{Texte en code}.
-    \begin{verbatim}
-    \texttt{texte} : Pour représenter du code.
-    \end{verbatim}
-    
-    Exemple: \textsc{Texte en petites majuscules}.
-    \begin{verbatim}
-    \textsc{texte} : Pour mettre le texte en petites majuscules.
-    \end{verbatim}
-    
-    Exemple: \textsf{Texte sans empattement}.
-    \begin{verbatim}
-    \textsf{texte} : Pour un style sans empattement.
-    \end{verbatim}
-    
-    Exemple: \textsl{Texte en italique}.
-    \begin{verbatim}
-    \textsl{texte} : Pour mettre le texte en italique (autre variante).
-    \end{verbatim}
-    
-    Exemple: \textbf{\textit{Texte en gras et italique}}.
-    \begin{verbatim}
-    \textbf{\textit{texte}} : Pour mettre le texte en gras et italique.
-    \end{verbatim}
-
-    Exemple: \textbf{\underline{Texte en gras et souligné}}.
-    \begin{verbatim}
-    \textbf{\underline{texte}} : Pour mettre le texte en gras et souligné.
-    \end{verbatim}
-
-    Exemple: \textit{\underline{Texte en italique et souligné}}.
-    \begin{verbatim}
-    \textit{\underline{texte}} : Pour mettre le texte en italique et souligné.
-    \end{verbatim}
-
-    Exemple: $x^6$ ou $H_2O$ RTBF$^{87}$.
-    \begin{verbatim}
-    Texte en exposant : Pour puissances ou indices, ex: $x^6$ ou $H_2O$ RTBF$^{87}$.
-    \end{verbatim}
-
-    Exemple: \hyperlink{RTBF}{RTBF}$^{\hyperlink{RTBF}{87}}$.
-    \begin{verbatim}
-    Texte avec lien : \hyperlink{RTBF}{RTBF}$^{\hyperlink{RTBF}{87}}$.
-    \end{verbatim}
-    
-    Exemple: Référence\textsuperscript{\cite{ref1}}.
-    \begin{verbatim}
-    Référence\textsuperscript{\cite{ref1}} : Ajouter des références.
-    \end{verbatim}
-
-    \begin{verbatim}
-        \raggedright : Pour eviter de couper les mots en fin de ligne
-    \end{verbatim}
-    
-
-
+\listoftables 
 
 \newpage
-\input{sections/Introduction.tex} % ajoute l'introduction
+\input{sections/Introduction.tex} 
 \newpage
 
-\input{sections/chap1.tex} % ajoute le chapitre 1
+\input{sections/chap1.tex}
 \newpage
-\input{sections/abreviations.tex} % ajoute la liste des abréviations
-\newpage
+\input{sections/abreviations.tex}
 
 
 \input{sections/bibliographie.tex}
