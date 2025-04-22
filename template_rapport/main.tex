@@ -1,4 +1,4 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 12pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -12,9 +12,11 @@
 \usepackage[none]{hyphenat}
 \usepackage{fancyhdr}
 \usepackage{datetime}
-\usepackage{titletoc}
+%\usepackage{titletoc}
 \usepackage{titlesec}
+\usepackage{lipsum}
 \usepackage{tocloft}
+%\usepackage{times} % Uncomment if you want to use Times font
 \usepackage[backend=biber,style=apa]{biblatex}
 \addbibresource{bibliographie.bib}
 %\usepackage{draftwatermark}
@@ -26,6 +28,12 @@
 %\SetWatermarkScale{1.5}
 %\SetWatermarkColor{red}
 %\SetWatermarkAngle{45}
+
+
+% Formatage des titres des chapitres
+\titleformat{\chapter}[hang]
+    {\normalfont\huge\bfseries}{\thechapter}{1em}{} % Définit le style des chapitres
+
 
 \fancypagestyle{couverture}{
     \fancyhf{}
@@ -48,18 +56,6 @@
     \renewcommand{\headrulewidth}{0pt} 
     \renewcommand{\footrulewidth}{0pt}
 }
-
-\pagestyle{fancy}
-\fancyhf{}
-\renewcommand{\footrulewidth}{0pt}
-\renewcommand{\headrulewidth}{0.1pt}
-\fancyhead[L]{\includegraphics[width=0.15\textwidth]{img/logo_hehbe_tech.png}}
-\fancyhead[R]{\vspace{0.1cm}\textbf{Année académique 2024-2025}}
-\fancyfoot[R]{Page \thepage}
-\headsep = 1.5cm
-\textheight = 24cm
-
-
 
 \newcommand{\premierepage}{
      \thispagestyle{couverture}
@@ -118,6 +114,29 @@
 
         \date{}
 }
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{\includegraphics[width=0.15\textwidth]{img/logo_hehbe_tech.png}}
+\fancyhead[R]{\vspace{0.1cm}\textbf{Année académique 2024-2025}}
+    \fancyfoot[R]{Page \thepage}
+    \renewcommand{\headrulewidth}{0.1pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.1pt}
+\fancyhead[L]{\includegraphics[width=0.15\textwidth]{img/logo_hehbe_tech.png}}
+\fancyhead[R]{\vspace{0.1cm}\textbf{Année académique 2024-2025}}
+\fancyfoot[R]{Page \thepage}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\headsep = 1.5cm
+\textheight = 24cm
+
+
+
 
 \begin{document}
 %\raggedright % Evite de couper les mots en fin de ligne
@@ -127,15 +146,16 @@
 \newpage
 \thispagestyle{empty} 
 \mbox{}
-
-
+\pagestyle{fancy}
 \newpage
 \pagenumbering{arabic} 
 \troisiemepage
+\newpage
+\thispagestyle{empty}
+\input{sections/remerciements.tex}
 
 \newpage
-\input{sections/remerciements.tex}
-\newpage
+\pagestyle{plain}
 \tableofcontents
 \newpage
 \listoffigures
@@ -224,14 +244,9 @@
 
 \input{sections/chap1.tex} % ajoute le chapitre 1
 \newpage
-\input{sections/abreviations.tex} % ajoute la liste des abréviations
-\newpage
-
-
 \input{sections/bibliographie.tex}
 \newpage
-
-\input{sections/annexes.tex}
-
-
+\appendix
+\chapter{annexes}
+\input{annexes/annexes.tex} 
 \end{document}
