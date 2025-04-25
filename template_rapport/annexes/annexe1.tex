@@ -6,10 +6,13 @@ Contenu de la sous-annexe A.1.
 
 \subannex{Sous-annexe A.2}
 Contenu de la sous-annexe A.2.
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{img/logo_hehbe_tech.png}
-    \caption{Exemple de figure dans l'annexe.}
+    %\caption{Ceci est une note pour la figure dans l'annexe.}
+    \addcontentsline{annextoc}{figure}{\figurename~\thefigure: Exemple de figure dans l'annexe.}
+    %\annextable[logo heh]{logo HEHBE}
     \label{fig:example_annexe}
 \end{figure}
 
@@ -21,6 +24,8 @@ Contenu de la sous-annexe A.2.
         Valeur 1  & Valeur 2  & Valeur 3  \\ \hline
         Valeur 4  & Valeur 5  & Valeur 6  \\ \hline
     \end{tabular}
-    \caption{Exemple de tableau dans l'annexe.}
+    %\caption*{Table~\thetable: Exemple de tableau dans l'annexe.}
+    \addcontentsline{annextoc}{table}{Table~\thetable: Exemple de tableau dans l'annexe.}
     \label{tab:example_annexe}
+    %\annexfigure[text]{exemple}
 \end{table}

@@ -1,6 +1,5 @@
 \appendix
 
-
 \renewcommand{\thesection}{\Alph{section}}
 \renewcommand{\thesubsection}{\thesection.\Alph{subsection}}
 \renewcommand{\thetable}{\thesection.\Alph{table}}
@@ -17,6 +16,18 @@
     \subsection*{\thesubsection\hspace{1em}#1}
     \addcontentsline{annextoc}{subsection}{\thesubsection\hspace{0.5em}#1}
 }
+\newcommand{\annexfigure}[2][]{%
+    \refstepcounter{figure}
+    \addcontentsline{annextoc}{figure}{\figurename~\thefigure: #2}%
+    \caption[#1]{#2}%
+}
+
+\newcommand{\annextable}[2][]{%
+    \refstepcounter{table}
+    \addcontentsline{annextoc}{table}{\tablename~\thetable: #2}%
+    \caption[#1]{#2}%
+}
+
 
 \chapter{Annexes}
 \vspace*{-3cm}
@@ -25,4 +36,3 @@
 \newpage
 
 \input{annexes/annexe1.tex}
-
