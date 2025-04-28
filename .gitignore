@@ -19,3 +19,4 @@
 *.ptc
 *.bbl-SAVE-ERROR
 *.annextoc
+*.synctex(busy)
