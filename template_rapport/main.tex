@@ -17,6 +17,8 @@
 \usepackage{titlesec}
 \usepackage{caption}
 \usepackage{etoolbox}
+\usepackage{tocloft}
+\usepackage{titlesec}
 
 \usepackage{times}
 \usepackage[backend=biber,style=apa]{biblatex}
@@ -28,6 +30,22 @@
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 \newbool{couverture}
 \booltrue{couverture}
+\titleformat{\chapter}[display]
+    {\normalfont\huge\bfseries}
+    {\chaptertitlename\ \thechapter}
+    {20pt}
+    {\Huge}    
+\titlespacing*{\chapter}
+    {0pt}
+    {0pt}
+    {20pt}
+\setlength\cftbeforetoctitleskip{0pt}
+\setlength\cftbeforelottitleskip{0pt}
+\setlength\cftbeforeloftitleskip{0pt}
+
+\setlength\cftaftertoctitleskip{20pt}
+\setlength\cftafterlottitleskip{20pt}
+\setlength\cftafterloftitleskip{20pt}
 
 % Configuration du watermark si besoin décommenter les lignes suivantes
 %\SetWatermarkText{Confidential}
