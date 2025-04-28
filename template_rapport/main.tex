@@ -16,6 +16,9 @@
 \usepackage{chngcntr}
 \usepackage{titlesec}
 \usepackage{caption}
+\usepackage{etoolbox}
+\usepackage{tocloft}
+\usepackage{titlesec}
 
 \usepackage{times}
 \usepackage[backend=biber,style=apa]{biblatex}
@@ -25,6 +28,19 @@
     {\normalfont\huge\bfseries}{\thechapter}{1em}{}
 
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\newbool{couverture}
+\booltrue{couverture}
+\titlespacing*{\chapter}
+    {0pt}
+    {0pt}
+    {20pt}
+\setlength\cftbeforetoctitleskip{0pt}
+\setlength\cftbeforelottitleskip{0pt}
+\setlength\cftbeforeloftitleskip{0pt}
+
+\setlength\cftaftertoctitleskip{20pt}
+\setlength\cftafterlottitleskip{20pt}
+\setlength\cftafterloftitleskip{20pt}
 
 % Configuration du watermark si besoin décommenter les lignes suivantes
 %\SetWatermarkText{Confidential}
@@ -75,10 +91,8 @@
 \textheight = 24cm
 
 
-
-
-\newcommand{\premierepage}{
-     \thispagestyle{couverture}
+\newcommand{\garde}{
+    \ifbool{couverture}{\thispagestyle{couverture}}{\thispagestyle{page_de_garde}}
         \vspace*{2cm}
         \begin{center}    
             {\large \textbf{HAUTE ECOLE DE LA COMMUNAUTE FRANCAISE EN HAINAUT}}\\
@@ -104,39 +118,9 @@
         \vspace{5cm}
         \date{}
 }
-
-\newcommand{\troisiemepage}{
-     \thispagestyle{page_de_garde}
-        \vspace*{2cm}
-        \begin{center}    
-            {\large \textbf{HAUTE ECOLE DE LA COMMUNAUTE FRANCAISE EN HAINAUT}}\\
-            {\large Département des Sciences et Technologies}\\
-            {\large 8A Avenue Victor Maistriau -- 7000 Mons}
-        \end{center}
-        \vspace{3cm}
-        \begin{center}
-            \fboxrule=0.3mm
-            \fbox{
-                \parbox{\textwidth}{
-                    \vspace{1cm}
-                    \centering
-                    \textbf{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae}
-                    \vspace{1cm}
-                }
-            }
-        \end{center}
-        \vspace{1.5cm}
-        \begin{center}
-            \normalsize{\textit{Projet de fin d'études réalisé en vue de l'obtention du titre de Bachelier en Informatique Orientation réseaux \& télécommunications option développement ou sécurité}}
-        \end{center}
-        \vspace{5cm}
-
-        \date{}
-}
-
 \begin{document}
 
-\premierepage
+\garde
 
 \newpage
 \thispagestyle{empty} 
@@ -144,8 +128,9 @@
 
 
 \newpage
-\pagenumbering{arabic} 
-\troisiemepage
+\pagenumbering{arabic}
+\boolfalse{couverture}
+\garde
 
 \newpage
 \input{sections/remerciements.tex}
