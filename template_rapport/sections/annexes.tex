@@ -1,37 +1,34 @@
+ \newpage
 \appendix
 
 \renewcommand{\thesection}{\Alph{section}}
-\renewcommand{\thesubsection}{\thesection.\Alph{subsection}} % Utilisation explicite de \Alph pour les sous-sections
-\renewcommand{\thetable}{\thesection.\Alph{table}} % Utilisation explicite de \Alph pour les tableaux
-\renewcommand{\thefigure}{\thesection.\Alph{figure}} % Utilisation explicite de \Alph pour les figures
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
 
 \newlistof{annexlist}{annextoc}{} 
-\newcommand{\annex}[1]{%
+\newcommand{\annex}[1]{
     \refstepcounter{section}
-    \setcounter{subsection}{0} % Réinitialisation stricte des sous-sections
-    \setcounter{figure}{0} % Réinitialisation stricte des figures
-    \setcounter{table}{0}  % Réinitialisation stricte des tableaux
-    \renewcommand{\thesubsection}{\thesection.\Alph{subsection}} % Forcer la numérotation des sous-sections
-    \renewcommand{\thetable}{\thesection.\Alph{table}} % Forcer la numérotation des tableaux
-    \renewcommand{\thefigure}{\thesection.\Alph{figure}} % Forcer la numérotation des figures
+    \setcounter{figure}{1}
+    \setcounter{table}{1}
     \section*{\thesection\hspace{1em}#1}
     \addcontentsline{annextoc}{section}{\thesection\hspace{0.5em}#1} 
 }
-\newcommand{\subannex}[1]{%
+\newcommand{\subannex}[1]{
     \refstepcounter{subsection}
     \subsection*{\thesubsection\hspace{1em}#1}
     \addcontentsline{annextoc}{subsection}{\thesubsection\hspace{0.5em}#1}
 }
-\newcommand{\annexfigure}[2][]{%
+\newcommand{\annexfigure}[2][]{
     \refstepcounter{figure}
-    \addcontentsline{annextoc}{figure}{\figurename~\thefigure: #2}%
-    \caption[#1]{#2}% Forcer l'affichage correct des figures
+    \addcontentsline{annextoc}{figure}{\figurename~\thefigure: #2}
+    \caption[#1]{#2}
 }
 
-\newcommand{\annextable}[2][]{%
+\newcommand{\annextable}[2][]{
     \refstepcounter{table}
-    \addcontentsline{annextoc}{table}{\tablename~\thetable: #2}%
-    \caption[#1]{#2}% Forcer l'affichage correct des tableaux
+    \addcontentsline{annextoc}{table}{\tablename~\thetable: #2}
+    \caption[#1]{#2}
 }
 
 \chapter{Annexes}
