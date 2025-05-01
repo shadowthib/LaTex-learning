@@ -20,3 +20,15 @@
 *.bbl-SAVE-ERROR
 *.annextoc
 *.synctex(busy)
+*.synctex.gz(busy)
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+*.alg
+*.zip
+
+

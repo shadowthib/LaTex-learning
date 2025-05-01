@@ -1,0 +1,40 @@
+ \newpage
+\appendix
+
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+\newlistof{annexlist}{annextoc}{} 
+\newcommand{\annex}[1]{
+    \refstepcounter{section}
+    \setcounter{figure}{1}
+    \setcounter{table}{1}
+    \section*{\thesection\hspace{1em}#1}
+    \addcontentsline{annextoc}{section}{\thesection\hspace{0.5em}#1} 
+}
+\newcommand{\subannex}[1]{
+    \refstepcounter{subsection}
+    \subsection*{\thesubsection\hspace{1em}#1}
+    \addcontentsline{annextoc}{subsection}{\thesubsection\hspace{0.5em}#1}
+}
+\newcommand{\annexfigure}[2][]{
+    \refstepcounter{figure}
+    \addcontentsline{annextoc}{figure}{\figurename~\thefigure: #2}
+    \caption[#1]{#2}
+}
+
+\newcommand{\annextable}[2][]{
+    \refstepcounter{table}
+    \addcontentsline{annextoc}{table}{\tablename~\thetable: #2}
+    \caption[#1]{#2}
+}
+
+\chapter{Annexes}
+\vspace*{-3cm}
+\addcontentsline{toc}{section}{Table des annexes}
+\listofannexlist
+\newpage
+
+\input{annexes/annexe1.tex}

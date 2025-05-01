@@ -1,0 +1,112 @@
+\newpage
+\chapter{Commandes}
+
+
+Voici les différents paramètres pour mettre en forme le texte : 
+
+Exemple: \textbf{Texte en gras}.
+\begin{verbatim}
+\textbf{texte} : Pour mettre le texte en gras.
+\end{verbatim}
+
+Exemple: \textit{Texte en italique}.
+\begin{verbatim}
+\textit{texte} : Pour mettre le texte en italique.
+\end{verbatim}
+
+Exemple: \underline{Texte souligné}.
+\begin{verbatim}
+\underline{texte} : Pour souligner le texte.
+\end{verbatim}
+
+Exemple: \texttt{Texte en code}.
+\begin{verbatim}
+\texttt{texte} : Pour représenter du code.
+\end{verbatim}
+
+Exemple: \textsc{Texte en petites majuscules}.
+\begin{verbatim}
+\textsc{texte} : Pour mettre le texte en petites majuscules.
+\end{verbatim}
+
+Exemple: \textsf{Texte sans empattement}.
+\begin{verbatim}
+\textsf{texte} : Pour un style sans empattement.
+\end{verbatim}
+
+Exemple: \textsl{Texte en italique}.
+\begin{verbatim}
+\textsl{texte} : Pour mettre le texte en italique (autre variante).
+\end{verbatim}
+
+Exemple: \textbf{\textit{Texte en gras et italique}}.
+\begin{verbatim}
+\textbf{\textit{texte}} : Pour mettre le texte en gras et italique.
+\end{verbatim}
+
+Exemple: \textbf{\underline{Texte en gras et souligné}}.
+\begin{verbatim}
+\textbf{\underline{texte}} : Pour mettre le texte en gras et souligné.
+\end{verbatim}
+
+Exemple: \textit{\underline{Texte en italique et souligné}}.
+\begin{verbatim}
+\textit{\underline{texte}} : Mettre le texte en italique et souligné.
+\end{verbatim}
+
+Exemple: $x^6$ ou $H_2O$ RTBF$^{87}$.
+\begin{verbatim}
+Texte en exposant : Puissances/indices, ex: $x^6$ ou $H_2O$ RTBF$^{87}$.
+\end{verbatim}
+
+Exemple: \hyperlink{RTBF}{RTBF}$^{\hyperlink{RTBF}{87}}$.
+\begin{verbatim}
+Texte avec lien : \hyperlink{RTBF}{RTBF}$^{\hyperlink{RTBF}{87}}$.
+\end{verbatim}
+
+Exemple: Référence\textsuperscript{\cite{ref1}}.
+\begin{verbatim}
+Référence\textsuperscript{\cite{ref1}} : Ajouter des références.
+\end{verbatim}
+
+\begin{verbatim}
+    \raggedright : Pour eviter de couper les mots en fin de ligne
+\end{verbatim}
+
+
+\chapter{Introduction}
+Introduction de votre rapport.\footnote{Cette présente le contexte et les objectifs du rapport.}
+
+\section{Contexte}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+
+% Ajout d'une figure
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=8cm]{img/logo_hehbe_tech.png}
+    \caption{Logo de la HEHBE}
+    \label{fig:example_figure}
+\end{figure}
+
+\section{Objectifs}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+\gls{exemple} tout pareil
+% Ajout d'une table
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Colonne 1 & Colonne 2 & Colonne 3 \\
+        \hline
+        Valeur 1 & Valeur 2 & Valeur 3 \\
+        \hline
+        Valeur 4 & Valeur 5 & Valeur 6 \\
+        \hline
+    \end{tabular}
+    \caption{Exemple de tableau dans l'introduction}
+    \label{tab:example_table}
+    \vspace{0.2cm} % Espace entre la légende et la source
+    Source :  Machin U., Exemple de tableau, Edition imaginaire, 2008.
+\end{table}
+
+
