@@ -32,3 +32,4 @@
 *.zip
 *.gz
 
+!other/*.pdf
