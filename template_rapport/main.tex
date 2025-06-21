@@ -17,27 +17,35 @@
 \usepackage{titlesec}
 \usepackage{caption}
 \usepackage{etoolbox}
+\usepackage{csquotes}
+\usepackage[bottom]{footmisc}
 \usepackage{tocloft}
 \usepackage{titlesec}
 \usepackage{chngcntr}
-\usepackage{csquotes}
-\usepackage[bottom]{footmisc}
-%\usepackage{draftwatermark} % Pour ajouter un watermark
 \usepackage{times}
-\usepackage[toc,numberedsection=autolabel]{glossaries} %,nonumberlist % pour ne pas afficher les numéros de page dans le glossaire
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage[nameinlink]{cleveref}
+%\usepackage{draftwatermark} % Pour ajouter un watermark
+\usepackage{lipsum} % Pour générer du texte d'exemple
+\usepackage[toc,numberedsection=autolabel,acronym,nonumberlist]{glossaries} %,nonumberlist % pour ne pas afficher les numéros de page dans le glossaire
 \usepackage[backend=biber,style=apa]{biblatex}
 \addbibresource{bibliographie.bib}
 \geometry{left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 \makeglossaries % pour update de glossaire 4 commandes : pdflatex main.tex, makeglossaries main, pdflatex main.tex, pdflatex main.tex
-
+\glsaddall
 \begin{document}
-\input{sections/style.tex}
-\input{sections/remerciements.tex}
-\input{sections/tables.tex}
 \sloppy
-\input{sections/Introduction.tex} 
-\input{sections/chap1.tex}
-\input{sections/lexique.tex}
-\input{sections/bibliographie.tex}
-\input{sections/annexes.tex}
+\input{chapter/style.tex}
+\input{chapter/remerciements.tex}
+\input{chapter/tables.tex}
+\input{chapter/abreviations.tex}
+\input{chapter/abstract.tex}
+\input{chapter/Introduction.tex}
+\input{chapter/commandes.tex}
+\input{chapter/chap1.tex}
+\input{chapter/bibliographie.tex}
+\input{chapter/lexique.tex}
+\input{chapter/cdc.tex}
+\input{chapter/annexes.tex}
 \end{document}
