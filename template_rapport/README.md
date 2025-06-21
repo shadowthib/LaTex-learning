@@ -8,7 +8,7 @@
 
 ## Installation
 
-1. Installez une distribution LaTeX (par example TexLive sous Linux ou MikTeX sous Windows).
+1. Installez une distribution LaTeX (par example TexLive sous Linux, MacTeX ou MikTeX sous Windows).
 2. Verifiez que les packages sont bien disponibles (une installation dites "complete").
     - Pour TexLive, veillez simplement à installer le package `texlive-full` si votre distribution le permet.
     - Pour MikTeX, utilisez le gestionnaire de packages intégré.
