@@ -1,0 +1,35 @@
+### Cleanup
+
+# Texfiles
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.pdf
+*.lof
+*.lot
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+*.ptc
+*.bbl-SAVE-ERROR
+*.annextoc
+*.synctex(busy)
+*.synctex.gz(busy)
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+*.alg
+*.zip
+*.gz
+
+!other/*.pdf
